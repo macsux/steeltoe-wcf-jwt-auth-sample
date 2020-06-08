@@ -1,0 +1,9 @@
+﻿---
+applications:
+- name: wcf-with-jwt
+  buildpacks:
+   - hwc_buildpack
+  memory: 512M
+  stack: windows
+  services:
+   - SSO

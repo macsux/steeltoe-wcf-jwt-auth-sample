@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30011.22
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SteeltoeWcf", "SteeltoeWcf\SteeltoeWcf.csproj", "{C6246E77-AA3E-4074-8788-BFB0631E4AB4}"
+	ProjectSection(ProjectDependencies) = postProject
+		{98F03423-C4AB-43EF-9DDB-C2A65AE51409} = {98F03423-C4AB-43EF-9DDB-C2A65AE51409}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CloudFoundryWcf", "CloudFoundryWcf\CloudFoundryWcf.csproj", "{98F03423-C4AB-43EF-9DDB-C2A65AE51409}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C6246E77-AA3E-4074-8788-BFB0631E4AB4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C6246E77-AA3E-4074-8788-BFB0631E4AB4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C6246E77-AA3E-4074-8788-BFB0631E4AB4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C6246E77-AA3E-4074-8788-BFB0631E4AB4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{98F03423-C4AB-43EF-9DDB-C2A65AE51409}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{98F03423-C4AB-43EF-9DDB-C2A65AE51409}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{98F03423-C4AB-43EF-9DDB-C2A65AE51409}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{98F03423-C4AB-43EF-9DDB-C2A65AE51409}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {170B5151-690A-4810-B3C6-69D13323C5A2}
+	EndGlobalSection
+EndGlobal
