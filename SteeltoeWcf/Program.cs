@@ -8,8 +8,8 @@ namespace SteeltoeWcf
         public static void Main(string[] args)
         {
             
-            var client = new ServiceReference1.ValueServiceClient("BasicHttpsBinding_IValueService", "https://wcf-with-jwt.apps.pcfone.io/ValueService.svc");
-            // var client = new ServiceReference1.ValueServiceClient("BasicHttpsBinding_IValueService", "https://localhost:44315/ValueService.svc");
+            // var client = new ServiceReference1.ValueServiceClient("BasicHttpsBinding_IValueService", "https://wcf-with-jwt.apps.pcfone.io/ValueService.svc");
+            var client = new ServiceReference1.ValueServiceClient("BasicHttpsBinding_IValueService", "https://localhost:44315/ValueService.svc");
             var opt = new CloudFoundryOptions(); 
             opt.AccessTokenEndpoint = "/oauth/token"; // default
             opt.AuthorizationUrl = "https://pivot-astakhov.login.run.pcfone.io";

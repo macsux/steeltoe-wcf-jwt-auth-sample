@@ -15,16 +15,14 @@ namespace CloudFoundryWcf
 
         protected void Application_Start(object sender, EventArgs e)
         {
-            ApplicationConfig.RegisterConfig("development");
+            ApplicationConfig.RegisterConfig("development"); 
             var startLogger = ApplicationConfig.LoggerFactory.CreateLogger("Startup");
             var serviceInfos = CloudFoundryServiceInfoCreator.Instance(ApplicationConfig.Configuration);
             var ssoInfo = serviceInfos.GetServiceInfos<SsoServiceInfo>().FirstOrDefault() 
                 ?? throw new NullReferenceException("Couldn't find SSO Service Info");
-
+  
             startLogger.LogInformation("Listening at http://{uri}", ssoInfo.ApplicationInfo.ApplicationUris.First());
-            var serviceHost = new ServiceHost(typeof(ValueService), new Uri("http://" + ssoInfo.ApplicationInfo.ApplicationUris.First()));
-            serviceHost.AddJwtAuthorization(ApplicationConfig.Configuration, null, ApplicationConfig.LoggerFactory);
-            MyJwtAuthorizationManager.Instance = serviceHost.Authorization.ServiceAuthorizationManager;
+
         }
 
         protected void Session_Start(object sender, EventArgs e)
