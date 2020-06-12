@@ -5,6 +5,8 @@ using Steeltoe.Security.Authentication.CloudFoundry.Wcf;
 using System;
 using System.Linq;
 using System.ServiceModel;
+using System.ServiceModel.Configuration;
+using System.Web.Routing;
 
 namespace CloudFoundryWcf
 {
@@ -22,6 +24,7 @@ namespace CloudFoundryWcf
             startLogger.LogInformation("Listening at http://{uri}", ssoInfo.ApplicationInfo.ApplicationUris.First());
             var serviceHost = new ServiceHost(typeof(ValueService), new Uri("http://" + ssoInfo.ApplicationInfo.ApplicationUris.First()));
             serviceHost.AddJwtAuthorization(ApplicationConfig.Configuration, null, ApplicationConfig.LoggerFactory);
+            MyJwtAuthorizationManager.Instance = serviceHost.Authorization.ServiceAuthorizationManager;
         }
 
         protected void Session_Start(object sender, EventArgs e)

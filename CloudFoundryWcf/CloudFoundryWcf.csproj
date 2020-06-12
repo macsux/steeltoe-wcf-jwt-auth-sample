@@ -260,6 +260,7 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="MyJwtAuthorizationManager.cs" />
     <Compile Include="ValueService.svc.cs">
       <DependentUpon>ValueService.svc</DependentUpon>
     </Compile>
